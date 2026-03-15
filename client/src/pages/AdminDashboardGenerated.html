@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant Admin Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header Section -->
+<header class="flex items-center justify-between px-6 pt-8 pb-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">restaurant_menu</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">Admin Portal</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">The Gourmet Kitchen</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Admin user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMLHyO3mJ3P4HiDTjEObnKe0pkrv3bjkNocP9DT8SsNlJa3TEqFwVhOEswvOzJw-fgiWYyidrFbM8MiZls-s_xSH6gyFMsclcH6OYsg9GRUmRB-gOIUMJwbA2IuGH39kzZyvedmU4v3HhX7umkIXpYo4_h5s7OukLVWwiUmtpEGWAXETyh2xPJDr3FjBchN9t-00-XSyB2x6f2lC6hg1oN3WpcTLSB0P2E-k4eBrABYnbfO6IToVd3Hpe6dg7EbqERtSce3q5snw"/>
+</div>
+</div>
+</header>
+<!-- Analytics Overview -->
+<section class="px-6 py-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Today's Overview</h2>
+<button class="text-primary text-sm font-semibold flex items-center gap-1">
+                    Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Main Card: Total Revenue -->
+<div class="col-span-2 bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Revenue</p>
+<h3 class="text-3xl font-bold mt-1">$12,450.00</h3>
+<div class="flex items-center gap-1 mt-2 text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.4%</span>
+</div>
+</div>
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+</div>
+<!-- Mini Graph Placeholder -->
+<div class="mt-4 h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-3/4"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-full"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-4/5"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-5/6"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-3/4"></div>
+</div>
+</div>
+<!-- Secondary Card: Orders -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Orders</p>
+<div class="flex items-end justify-between mt-1">
+<h3 class="text-xl font-bold">142</h3>
+<div class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold">+5.2%</div>
+</div>
+<div class="mt-3 h-1 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[70%]"></div>
+</div>
+</div>
+<!-- Secondary Card: Avg Value -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Avg Value</p>
+<div class="flex items-end justify-between mt-1">
+<h3 class="text-xl font-bold">$87.60</h3>
+<div class="text-orange-600 dark:text-orange-400 text-xs font-semibold">-2.1%</div>
+</div>
+<div class="mt-3 h-1 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-6 py-4">
+<h2 class="text-lg font-bold mb-4">Quick Actions</h2>
+<div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="size-14 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="text-xs font-medium">New Order</span>
+</button>
+<button class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="size-14 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="text-xs font-medium">Edit Menu</span>
+</button>
+<button class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="size-14 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-xs font-medium">Staff List</span>
+</button>
+<button class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="size-14 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<span class="text-xs font-medium">Reports</span>
+</button>
+</div>
+</section>
+<!-- Recent Orders -->
+<section class="px-6 py-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Recent Orders</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Order Item 1 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">receipt_long</span>
+</div>
+<div>
+<p class="font-bold text-sm">Order #8492</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Table 12 • 2 items</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm">$45.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                            Completed
+                        </span>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400">timer</span>
+</div>
+<div>
+<p class="font-bold text-sm">Order #8495</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Table 05 • 4 items</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm">$112.50</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+                            Pending
+                        </span>
+</div>
+</div>
+<!-- Order Item 3 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-rose-600 dark:text-rose-400">cancel</span>
+</div>
+<div>
+<p class="font-bold text-sm">Order #8488</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Table 18 • 1 item</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm">$12.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">
+                            Cancelled
+                        </span>
+</div>
+</div>
+<!-- Order Item 4 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">receipt_long</span>
+</div>
+<div>
+<p class="font-bold text-sm">Order #8490</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Table 01 • 3 items</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm">$64.25</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                            Completed
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 pb-8 pt-3 px-6 z-20">
+<div class="flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled-icon">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-medium">Orders</span>
+</a>
+<div class="relative -top-8">
+<button class="size-14 bg-primary text-white rounded-full flex items-center justify-center shadow-xl shadow-primary/30 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="text-[10px] font-medium">Menu</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
