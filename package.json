@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "dev": "cd client && npm run dev",
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && npm run build",
+    "install-all": "npm install && cd client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +27,7 @@
     "socket.io": "^4.8.3"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "nodemon": "^3.1.11"
   }
 }
